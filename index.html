@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Countdown</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"></link>
+	<link rel="stylesheet" href="countdown.css"></link>
+</head>
+
+<body>
+	<header>
+		<h1 class="heading"><img src="logo_nc.png" width="100" ></h1>
+		<hr>
+	</header> 
+	<div class="container">
+		<div id="timer"><span id="minus">-</span><span id="cd_m">00</span><span id="point">:</span><span id="cd_s">00</span></div>
+	</div>
+	<div class="input">
+	 <input type="button" value="Start" id="cd_start" />
+    <input type="button" value="Pause" id="cd_pause" />
+    <input type="button" value="Stop"  id="cd_stop" />
+    <input type="button" value="Reset" id="cd_reset" />
+    <input type="button" value="Set" id="cd_set" />
+    <br/>
+    <br/>
+    <input type="text" id="cd_seconds" />
+    mins
+    </div>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="timer.js"></script>
+</body>
+</html>
