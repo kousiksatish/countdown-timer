@@ -10,6 +10,8 @@ Any questions, suggestions? marc.fuehnen(at)gmail.com
 
 $(document).ready(function() {
 
+    setBackgroundImage();
+
     (function($){
     
         $.extend({
@@ -249,6 +251,7 @@ $(document).ready(function() {
         
         $('#sw_reset,#cd_reset').live('click', function() {
             $.APP.resetTimer();
+            setBackgroundImage();
         });  
         
         $('#sw_pause,#cd_pause').live('click', function() {
@@ -262,3 +265,29 @@ $(document).ready(function() {
     })(jQuery);
         
 });
+
+var image_id = 0;
+
+//TODO 
+//remove unnecessary images used for testing
+//add image names of images to be added as background
+var images = [
+                'logo_nc.png',
+                'pragyan_logo.png',
+                'lifelameme.jpg',
+                'pragyan.png'                
+];
+   
+function setBackgroundImage()
+{
+    $(".background-container img").attr("src",images[image_id]);
+
+    if(image_id<images.length-1)     //increment image id as long as next image in array exists 
+    {
+        image_id = image_id + 1;
+    }
+    else                             //repeat cycle from start
+    {
+        image_id = 0;
+    }
+}

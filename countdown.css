@@ -340,3 +340,12 @@ h3 {
 	right:0;
 	color:white;
 }
+
+.background-container img
+{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	opacity: 0.6;
+}
